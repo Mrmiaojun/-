@@ -28,7 +28,7 @@
     <![endif]-->
 
     <!-- 兼容 ie 9 -->
-    <!--[if lt IE9]>    
+    <!--[if lt IE 9]>    
     <script>    
     (function() {   
         if (!    
@@ -50,7 +50,12 @@
         <div class="select-downBox" id="select-downBox">
         </div>
     </div>
-    <script src="./jquery-3.3.1.js"></script>
+    <!--[if lt IE 9]>
+        <script src="./jquery-1.11.3.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+        <script src="./jquery-3.3.1.js"></script>
+    <!--<![endif]-->
     <script src="./index.js"></script>
     <script src="./data.json?callback=myData"></script> <!--通过jsonp 获取到本地json文件-->
 </body>
