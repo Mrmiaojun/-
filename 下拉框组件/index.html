@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- 兼容 360浏览器 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./iconFont/iconfont.css">
+    <title>Document</title>
+
+    <!--兼容ie方法一：使h5标签成为块状 -->
+    <!--[if IE]>
+    <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+    <![endif]-->
+
+    <!-- 兼容ie 方法二 -->
+
+    <!-- 如果为ie6/7/8 用html4 标签替换html5 标签 -->
+    <!--[if lte IE 8]>    
+    <noscript>  
+        <style>.html5-wrappers{display:none!important;}</style>  
+        <div class="ie-noscript-warning">您的浏览器禁用了脚本，请<a href="">查看这里</a>来启用脚本!或者<a href="/?noscript=1">继续访问</a>.   
+        </div>  
+    </noscript>  
+    <![endif]-->
+
+    <!-- 兼容 ie 9 -->
+    <!--[if lt IE9]>    
+    <script>    
+    (function() {   
+        if (!    
+        /*@cc_on!@*/  
+        0) return;   
+        var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');   
+        var i= e.length;   
+        while (i--){   
+            document.createElement(e[i])   
+        }    
+    })()    
+    </script>   
+    <![endif]--> 
+</head>
+<body>
+    <div class="componect-select">
+        <input type="text" class="select-input">
+        <i class="iconfont icondown" id="select-btn"></i>
+        <div class="select-downBox" id="select-downBox">
+        </div>
+    </div>
+    <script src="./jquery-3.3.1.js"></script>
+    <script src="./index.js"></script>
+    <script src="./data.json?callback=myData"></script> <!--通过jsonp 获取到本地json文件-->
+</body>
+</html>
